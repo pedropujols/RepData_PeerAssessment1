@@ -3,7 +3,6 @@ title: "Reproducible Research Course Project 1"
 author: "Pedro Pujols"
 date: "1/25/2021"
 output: html_document
-keep_md: true
 ---
 
 ## Introduction
@@ -27,25 +26,7 @@ The dataset is stored in a comma-separated-value (CSV) file and there are a tota
 
 ```r
 library("data.table")
-```
-
-```
-## Warning: package 'data.table' was built under R version 3.6.3
-```
-
-```
-## data.table 1.13.0 using 2 threads (see ?getDTthreads).  Latest news: r-datatable.com
-```
-
-```r
 library(ggplot2)
-```
-
-```
-## Warning: package 'ggplot2' was built under R version 3.6.2
-```
-
-```r
 datalink <- "https://d396qusza40orc.cloudfront.net/repdata%2Fdata%2Factivity.zip"
 download.file(datalink, destfile = paste0(getwd(), '/data1.zip'), method = "curl")
 unzip("data1.zip",exdir = "data")
